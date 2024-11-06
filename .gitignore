@@ -1,0 +1,33 @@
+# Node.js/Express ignore files
+
+# Logs
+logs/
+*.log
+
+# Node.js core files
+node_modules/
+npm-debug.log*
+
+# Express-specific files
+/views/.cache
+
+# IDE and editor files
+.vscode/
+.atom/
+.sublime-text
+.idea/
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# Production build files (if applicable)
+/dist/
+/build/
+
+# Miscellaneous
+*.tmp
+*.bak
+*.swp
