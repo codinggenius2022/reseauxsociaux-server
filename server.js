@@ -20,7 +20,7 @@ app.use(
 const io = require("socket.io")(http, {
   path: "/socket.io",
   cors: {
-    origin: [process.env.CLIENT_URL],
+    origin: "*",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   },
