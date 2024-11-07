@@ -13,14 +13,21 @@ const http = require("http").createServer(app);
 
 app.use(
   cors({
-    origin: [process.env.CLIENT_URL],
+    origin: [
+      process.env.CLIENT_URL,
+      "https://reseauxsociaux-client.onrender.com",
+    ],
   })
 );
 
 const io = require("socket.io")(http, {
   path: "/socket.io",
   cors: {
-    origin: [process.env.CLIENT_URL, "http://localhost:3000"],
+    origin: [
+      process.env.CLIENT_URL,
+      "http://localhost:3000",
+      "https://reseauxsociaux-client.onrender.com",
+    ],
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   },
